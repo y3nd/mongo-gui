@@ -11,12 +11,12 @@ function auth(req, res, next) {
   const [username, password] = _decodeCredentials(
     req.headers.authorization || ''
   );
-  if (process.env.USERNAME == undefined && process.env.PASSWORD == undefined) {
+  if (process.env.AUTH_USERNAME == undefined && process.env.AUTH_PASSWORD == undefined) {
     return next();
   } else {
     if (
-      username === process.env.USERNAME &&
-      password === process.env.PASSWORD
+      username === process.env.AUTH_USERNAME &&
+      password === process.env.AUTH_PASSWORD
     ) {
       return next();
     }
