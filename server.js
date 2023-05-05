@@ -48,8 +48,9 @@ dataAccessAdapter.InitDB(app);
 // listen on :port once the app is connected to the MongoDB
 app.once('connectedToDB', () => {
   const port = argv.p || process.env.PORT || 4321;
+  const host = argv.h || process.env.HOST || '127.0.0.1';
   app.listen(port, () => {
-    console.log(`> Access Mongo GUI at http://localhost:${port}`);
+    console.log(`> Access Mongo GUI at http://${host}:${port}`);
   });
 });
 

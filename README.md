@@ -48,16 +48,16 @@ services:
     ports:
       - "4321:4321"
     environment:
-      - MONGO_URL=mongodb://localhost:27017
+      - MONGO_URL=mongodb://127.0.0.1:27017
 ```
 
 ## Mongo GUI Usage
  The commands ```mongo-gui``` and ```npm start or node server.js``` start the application with the following configuaration:
 
- - URL (-u): ```mongodb://localhost:27017```
+ - URL (-u): ```mongodb://127.0.0.1:27017```
  - PORT (-p): ```4321```
 
-   and the application will be accesible at ```http://localhost:4321```
+   and the application will be accesible at ```http://127.0.0.1:4321```
 
 To connect to any other mongodb instance, pass mongo connection string as an argument, eg:
 
